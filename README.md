@@ -47,6 +47,7 @@ This repository contains the source code for the Delta Rho Sigma website, hosted
 2. **Deploy to Firebase Hosting**  
    Once you're ready to make your edits live, deploy the changes using:
    ```bash
+   npm run build
    firebase deploy
    ```
 
