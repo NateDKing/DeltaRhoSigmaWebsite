@@ -96,11 +96,21 @@ export const AlphaChapter = () => {
 
         <section className="mb-12">
           <ChapterInfo
+            name="Ethan Schurr"
+            role="Secretary"
+            description="Comming soon..."
+            photoSrc="/images/chapter-a-ethan-schurr.jpg"
+            photoOnRight={true}
+          />
+        </section>
+
+        <section className="mb-12">
+          <ChapterInfo
             name="Jack Cooperman"
             role="Rush Chair"
             description="Delta Rho Sigma aspires to empower STEM-focused college students to make startups to showcase their unique talents and high level engineering skills. We provide mentorship and capital to make our members' goals a reality."
             photoSrc="/images/chapter-a-jack-cooperman.png"
-            photoOnRight={true}
+            photoOnRight={false}
           />
         </section>
 
@@ -110,7 +120,7 @@ export const AlphaChapter = () => {
             role="Event Coordinator"
             description="Engineers are half scientists and half artists. The role of the engineer is to passionately solve problems with the skepticism of a scientist, and the creativity of an artist. Within the current framework, it is difficult to achieve my fullest potential of this definition. Delta Rho Sigma provides a space to fully explore the boundaries of this definition."
             photoSrc="/images/chapter-a-jacob-cockerill.jpg"
-            photoOnRight={false}
+            photoOnRight={true}
           />
         </section>
 
@@ -120,6 +130,16 @@ export const AlphaChapter = () => {
             role="Webmaster"
             description="While engineering teaches us the importance of precision, Delta Rho Sigma helps us recognize the value of taking initiative and transforming technical ideas into viable business projects."
             photoSrc="/images/chapter-a-nate-king.jpg"
+            photoOnRight={false}
+          />
+        </section>
+
+        <section className="mb-12">
+          <ChapterInfo
+            name="Deven Wells"
+            role="Alumni relations"
+            description="Although I am pursuing a top engineering degree, the skills and lessons I've learned from my entrepreneurial ventures have propelled me toward my goals and provided keys to success that I believe my education alone could not have offered."
+            photoSrc="/images/chapter-a-deven-wells.jpg"
             photoOnRight={true}
           />
         </section>

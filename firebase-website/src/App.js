@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link, Navigate } from 'react-router-dom';
 import { Home } from './components/Home';
 import { Board } from './components/Board';
 import { Donate } from './components/Donate';
@@ -57,6 +57,7 @@ const App = () => {
         {/* Main Routes */}
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Navigate to="/" replace />} />
           <Route path="/alpha-chapter" element={<AlphaChapter />} />
           <Route path="/beta-chapter" element={<BetaChapter />} />
           <Route path="/board" element={<Board />} />
@@ -77,7 +78,6 @@ const App = () => {
         </footer>
       </div>
     </Router>
-
   );
 };
 
