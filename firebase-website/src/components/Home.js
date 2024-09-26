@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { submitContact, Contact} from '../services/contactCollecting';
+import { submitContact, ContactInfo} from '../services/contactCollecting';
 
 export const Home = () => {
   const photos = [
-    '/images/home-scroll-1.jpg',
+    // '/images/home-scroll-1.jpg',
     '/images/home-scroll-2.jpg',
     '/images/home-scroll-3.jpg',
     '/images/home-scroll-4.jpg'
@@ -43,7 +43,7 @@ export const Home = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const contact = new Contact(formData.firstName, formData.lastName, formData.email, formData.phone, formData.comment, formData.newsletter);
+      const contact = new ContactInfo(formData.firstName, formData.lastName, formData.email, formData.phone, formData.comment, formData.newsletter);
       submitContact(contact);
 
       formData.firstName = '';
@@ -115,11 +115,6 @@ export const Home = () => {
         {/* Our Values Section */}
         <section className="mb-12">
           <div className="flex items-center mb-6 justify-start">
-            <img
-              src="/DRho Icon.png"
-              alt="DRho Icon"
-              className="h-16 w-16 mr-4"
-            />
             <h2 className="text-3xl font-bold text-white" style={{ textAlign: 'center', flexGrow: 1, color: '#CFA746' }}>OUR VALUES</h2>
           </div>
 
@@ -172,11 +167,6 @@ export const Home = () => {
         <section className="mb-12">
           <div className="flex flex-col items-center">
             <div className="flex items-center mb-6 justify-start w-full">
-              <img
-                src="/DRho Icon.png"
-                alt="DRho Icon"
-                className="h-16 w-16 mr-4"
-              />
               <h2 className="text-3xl font-bold" style={{ color: '#CFA746', textAlign: 'center', flexGrow: 1 }}>D-RHO NEWSLETTER</h2>
             </div>
             <p className="text-white text-center mb-8">Get in touch with D-Rho and stay updated with our latest news and insights.</p>

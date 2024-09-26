@@ -1,7 +1,7 @@
-import { collection, setDoc, doc, addDoc} from "firebase/firestore";
+import { collection, addDoc} from "firebase/firestore";
 import { db } from "./firebase";
 
-export class Contact {
+export class ContactInfo {
   constructor(first, last, email, phone, comment, newsletter) {
     this.firstName = first;
     this.lastName = last;
