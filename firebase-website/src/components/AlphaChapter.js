@@ -98,7 +98,7 @@ export const AlphaChapter = () => {
           <ChapterInfo
             name="Ethan Schurr"
             role="Secretary"
-            description="Comming soon..."
+            description="As a software engineer, I must consistently keep an open mindset for new languages to learn. Delta Rho Sigma provides a firsthand approach to learning the language of entrepreneurs, so long as they provide the adequate time."
             photoSrc="/images/chapter-a-ethan-schurr.jpg"
             photoOnRight={true}
           />
