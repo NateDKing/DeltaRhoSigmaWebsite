@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { submitContact, ContactInfo } from '../services/contactCollecting';
 
 export const Contact = () => {
   const photos = [
@@ -38,27 +39,37 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('/api/contact-us', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-      
-      if (response.ok) {
-        alert('Thank you for contacting us!');
-        setFormData({
-          firstName: '',
-          lastName: '',
-          email: '',
-          phone: '',
-          comment: '',
-          newsletter: false
-        });
-      } else {
-        alert('There was an error. Please try again.');
-      }
+      const contact = new ContactInfo(formData.firstName, formData.lastName, formData.email, formData.phone, formData.comment, formData.newsletter);
+      submitContact(contact);
+
+      formData.firstName = '';
+      formData.lastName = '';
+      formData.email = '';
+      formData.phone = '';
+      formData.comment = '';
+      formData.newsletter = false;
+
+      // const response = await fetch('/api/contact-us', {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //   },
+      //   body: JSON.stringify(formData),
+      // });
+
+      // if (response.ok) {
+      //   alert('Thank you for contacting us!');
+      //   setFormData({
+      //     firstName: '',
+      //     lastName: '',
+      //     email: '',
+      //     phone: '',
+      //     comment: '',
+      //     newsletter: false
+      //   });
+      // } else {
+      //   alert('There was an error. Please try again.');
+      // }
     } catch (error) {
       console.error('Error:', error);
       alert('There was an error. Please try again.');
@@ -69,7 +80,7 @@ export const Contact = () => {
     <div style={{ backgroundColor: '#363939', width: '100%', margin: 0, padding: 0, minHeight: '100vh' }}>
       {/* Photo Reel Section */}
       <section className="mb-12">
-        <div className="h-96 flex items-center justify-center relative" style={{ backgroundColor: '#CFA746', overflow: 'hidden', width: '100%' }}>          
+        <div className="h-96 flex items-center justify-center relative" style={{ backgroundColor: '#CFA746', overflow: 'hidden', width: '100%' }}>
           <div
             className={`slider ${isSliding ? 'sliding' : ''}`}
             style={{
