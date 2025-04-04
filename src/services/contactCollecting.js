@@ -19,7 +19,8 @@ const contactToJson = (contact) => {
     email: contact.email,
     phone: contact.phone,
     comment: contact.comment,
-    newsletter: contact.newsletter
+    newsletter: contact.newsletter,
+    submitDate: new Date().toISOString(),
   };
 }
 
