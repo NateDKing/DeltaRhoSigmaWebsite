@@ -5,7 +5,6 @@ import { Board } from './components/Board';
 import { Donate } from './components/Donate';
 import { Contact } from './components/Contact';
 import { AlphaChapter } from './components/AlphaChapter';
-import { BetaChapter } from './components/BetaChapter';
 
 const App = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
@@ -59,7 +58,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Navigate to="/" replace />} />
           <Route path="/alpha-chapter" element={<AlphaChapter />} />
-          <Route path="/beta-chapter" element={<BetaChapter />} />
+          {/* <Route path="/beta-chapter" element={<BetaChapter />} /> */}
           <Route path="/board" element={<Board />} />
           <Route path="/donate" element={<Donate />} />
           <Route path="/contact" element={<Contact />} />
@@ -72,7 +71,7 @@ const App = () => {
               <img src="/DRho Logo.png" alt="Delta Rho Sigma Logo" className="h-8" />
             </div>
             <div className="text-right">
-              <p>&copy; 2024 Delta Rho Sigma. All rights reserved.</p>
+              <p>&copy; 2025 Delta Rho Sigma. All rights reserved.</p>
             </div>
           </div>
         </footer>
