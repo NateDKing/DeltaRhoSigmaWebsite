@@ -5,6 +5,7 @@ import { Board } from './components/Board';
 import { Donate } from './components/Donate';
 import { Contact } from './components/Contact';
 import { AlphaChapter } from './components/AlphaChapter';
+import { NotFound } from './components/NotFound';
 
 const App = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
@@ -63,6 +64,7 @@ const App = () => {
           <Route path="/donate" element={<Donate />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/home" element={<Navigate to="/" replace />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
 
         {/* Footer */}
