@@ -52,15 +52,15 @@ const boardMembers = [
 ];
 
 const BoardMemberCard = ({ name, title, image, description }) => (
-  <div 
-    className="bg-transparent border-4 border-[#CFA746] rounded-lg shadow-md overflow-hidden" 
+  <div
+    className="bg-transparent border-4 border-[#CFA746] rounded-lg shadow-md overflow-hidden"
     style={{ borderRadius: '15px' }}  // Added 15px border radius for the container
   >
     <div className="flex">
-      <img 
-        src={image} 
-        alt={name} 
-        className="w-1/3 h-32 object-cover" 
+      <img
+        src={image}
+        alt={name}
+        className="w-1/3 h-32 object-cover"
         style={{ borderBottomRightRadius: '15px' }}  // Rounded bottom-right corner of the image
       />
       <div className="w-2/3 p-4">
@@ -69,7 +69,7 @@ const BoardMemberCard = ({ name, title, image, description }) => (
       </div>
     </div>
     <div className="p-4">
-      <p 
+      <p
         className="text-white text-sm h-40 overflow-y-auto description"  // Added "description" class for custom hover behavior
       >
         {description}
@@ -136,7 +136,7 @@ export const Board = () => {
     <div style={{ backgroundColor: '#363939', width: '100%', margin: 0, padding: 0, minHeight: '100vh' }}>
       {/* Hero Section */}
       <section className="mb-12">
-        <div className="h-96 flex items-center justify-center relative" style={{ backgroundColor: '#CFA746', overflow: 'hidden', width: '100%' }}>
+        <div className="max-h-96 flex items-center justify-center relative" style={{ backgroundColor: '#CFA746', overflow: 'hidden', width: '100%' }}>
           <div
             className={`slider ${isSliding ? 'sliding' : ''}`}
             style={{
@@ -166,6 +166,6 @@ export const Board = () => {
           ))}
         </div>
       </div>
-    </div>  
+    </div>
   );
 };

@@ -83,7 +83,7 @@ export const Home = () => {
     <div style={{ backgroundColor: '#363939', width: '100%', margin: 0, padding: 0, minHeight: '100vh' }}>
       {/* Hero Section */}
       <section className="mb-12">
-        <div className="h-96 flex items-center justify-center relative" style={{ overflow: 'hidden', width: '100%' }}>
+        <div className="max-h-96 flex items-center justify-center relative" style={{ overflow: 'hidden', width: '100%' }}>
           <div className="absolute z-10 bg-white p-4 rounded shadow-lg" style={{ top: '30%', left: '30px', width: '300px', opacity: 0.8 }}>
             <h3 className="text-xl font-bold">Question</h3>
             <p>How can DRho help you?</p>

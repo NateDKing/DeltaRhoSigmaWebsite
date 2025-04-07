@@ -39,7 +39,7 @@ export const AlphaChapter = () => {
     <div style={{ width: '100%', margin: 0, padding: 0, minHeight: '100vh' }}>
       {/* Hero Section */}
       <section className="mb-12">
-        <div className="h-96 flex items-center justify-center relative" style={{ backgroundColor: '#CFA746', overflow: 'hidden', width: '100%' }}>
+        <div className="max-h-96 flex items-center justify-center relative" style={{ backgroundColor: '#CFA746', overflow: 'hidden', width: '100%' }}>
           <div
             className={`slider ${isSliding ? 'sliding' : ''}`}
             style={{

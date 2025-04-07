@@ -80,7 +80,7 @@ export const Contact = () => {
     <div style={{ backgroundColor: '#363939', width: '100%', margin: 0, padding: 0, minHeight: '100vh' }}>
       {/* Photo Reel Section */}
       <section className="mb-12">
-        <div className="h-96 flex items-center justify-center relative" style={{ backgroundColor: '#CFA746', overflow: 'hidden', width: '100%' }}>
+        <div className="max-h-96 flex items-center justify-center relative" style={{ backgroundColor: '#CFA746', overflow: 'hidden', width: '100%' }}>
           <div
             className={`slider ${isSliding ? 'sliding' : ''}`}
             style={{
