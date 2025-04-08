@@ -36,10 +36,10 @@ export const AlphaChapter = () => {
   }, [photos.length]);
 
   return (
-    <div style={{ width: '100%', margin: 0, padding: 0, minHeight: '100vh' }}>
+    <div className="m-0 p-0 min-h-screen">
       {/* Hero Section */}
       <section className="mb-12">
-        <div className="max-h-96 flex items-center justify-center relative" style={{ backgroundColor: '#CFA746', overflow: 'hidden', width: '100%' }}>
+        <div className="max-h-96 flex items-center justify-center relative overflow-hidden bg-primary-gray">
           <div
             className={`slider ${isSliding ? 'sliding' : ''}`}
             style={{
@@ -63,8 +63,8 @@ export const AlphaChapter = () => {
       </section>
 
       {/* Chapter Info Section */}
-      <div style={{ margin: '0 10vw', paddingBottom: '2rem' }}>
-      <section className="mb-12">
+      <div className="mx-10vw mb-2rem">
+      <section className="mb-12 inline">
         <ChapterInfo
           name="Andrew Nichols"
           role="President"

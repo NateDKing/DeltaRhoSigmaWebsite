@@ -19,9 +19,11 @@ const App = () => {
 
   return (
     <Router>
-      <div className="min-h-screen" style={{ backgroundColor: darkGrayHex }}>
+      {/* <div className="min-h-screen" style={{ backgroundColor: darkGrayHex }}> */}
+      <div className="min-h-screen bg-primary-gray">
         {/* Top Banner */}
-        <nav className="text-white p-4" style={{ backgroundColor: navyBlueHex }}>
+        {/* <nav className="text-white p-4" style={{ backgroundColor: navyBlueHex }}> */}
+        <nav className="text-white p-4 bg-primary-blue">
           <div className="container mx-auto flex justify-between items-center">
             <div className="flex items-center space-x-2">
               <img src="/DRho Logo.png" alt="Delta Rho Sigma Logo" className="h-8" />
@@ -68,12 +70,13 @@ const App = () => {
         </Routes>
 
         {/* Footer */}
-        <footer className="text-white p-4 mt-8" style={{ backgroundColor: navyBlueHex }}>
+        {/* <footer className="text-white p-4 mt-8" style={{ backgroundColor: navyBlueHex }}> */}
+        <footer className="p-4 mt-8 text-brand-primary bg-primary-blue">
           <div className="container mx-auto flex justify-between items-center">
             <div className="logo">
-              <img src="/DRho Logo.png" alt="Delta Rho Sigma Logo" className="h-8" />
+              <img src="/DRho Logo.png" alt="Delta Rho Sigma Logo" className="h-8 text-brand-primary" />
             </div>
-            <div className="text-right">
+            <div className="text-right text-white">
               <p>&copy; 2025 Delta Rho Sigma. All rights reserved.</p>
             </div>
           </div>

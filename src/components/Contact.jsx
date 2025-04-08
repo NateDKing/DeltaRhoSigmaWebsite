@@ -77,10 +77,10 @@ export const Contact = () => {
   };
 
   return (
-    <div style={{ backgroundColor: '#363939', width: '100%', margin: 0, padding: 0, minHeight: '100vh' }}>
+    <div className="bg-primary-gray w-full min-h-screen m-0 p-0">
       {/* Photo Reel Section */}
       <section className="mb-12">
-        <div className="max-h-96 flex items-center justify-center relative" style={{ backgroundColor: '#CFA746', overflow: 'hidden', width: '100%' }}>
+        <div className="max-h-96 flex items-center justify-center relative overflow-hidden bg-primary-gray">
           <div
             className={`slider ${isSliding ? 'sliding' : ''}`}
             style={{
@@ -115,17 +115,17 @@ export const Contact = () => {
             <div className="mt-8">
               <h3 className="text-2xl font-bold mb-2" style={{ color: '#CFA746' }}>Connect With Us</h3>
               <div className="flex space-x-4">
-                <a href="https://www.instagram.com/deltarhosigma/?hl=en" className="text-white hover:text-[#CFA746]">Instagram</a>
+                <a href="https://www.instagram.com/deltarhosigma/?hl=en" className="text-white hover:text-primary-gold">Instagram</a>
               </div>
             </div>
           </div>
 
           {/* Contact Form */}
           <div className="md:w-1/2">
-            <h2 className="text-3xl font-bold mb-4" style={{ color: '#CFA746' }}>Get in Touch</h2>
-            <form onSubmit={handleSubmit} className="bg-transparent border-4 border-[#CFA746] p-6 rounded-lg shadow-lg">
+            <h2 className="text-3xl font-bold mb-4 text-primary-gold">Get in Touch</h2>
+            <form onSubmit={handleSubmit} className="bg-transparent border-4 border-primary-gold p-6 rounded-lg shadow-lg">
               <div className="mb-4">
-                <label htmlFor="firstName" className="block text-[#CFA746] text-sm font-bold mb-2">First Name</label>
+                <label htmlFor="firstName" className="block text-primary-gold text-sm font-bold mb-2">First Name</label>
                 <input
                   type="text"
                   id="firstName"
@@ -137,7 +137,7 @@ export const Contact = () => {
                 />
               </div>
               <div className="mb-4">
-                <label htmlFor="lastName" className="block text-[#CFA746] text-sm font-bold mb-2">Last Name</label>
+                <label htmlFor="lastName" className="block text-primary-gold text-sm font-bold mb-2">Last Name</label>
                 <input
                   type="text"
                   id="lastName"
@@ -149,7 +149,7 @@ export const Contact = () => {
                 />
               </div>
               <div className="mb-4">
-                <label htmlFor="email" className="block text-[#CFA746] text-sm font-bold mb-2">Email</label>
+                <label htmlFor="email" className="block text-primary-gold text-sm font-bold mb-2">Email</label>
                 <input
                   type="email"
                   id="email"
@@ -161,7 +161,7 @@ export const Contact = () => {
                 />
               </div>
               <div className="mb-4">
-                <label htmlFor="phone" className="block text-[#CFA746] text-sm font-bold mb-2">Phone</label>
+                <label htmlFor="phone" className="block text-primary-gold text-sm font-bold mb-2">Phone</label>
                 <input
                   type="tel"
                   id="phone"
@@ -172,7 +172,7 @@ export const Contact = () => {
                 />
               </div>
               <div className="mb-4">
-                <label htmlFor="comment" className="block text-[#CFA746] text-sm font-bold mb-2">Message</label>
+                <label htmlFor="comment" className="block text-primary-gold text-sm font-bold mb-2">Message</label>
                 <textarea
                   id="comment"
                   name="comment"
@@ -190,7 +190,7 @@ export const Contact = () => {
                     name="newsletter"
                     checked={formData.newsletter}
                     onChange={handleInputChange}
-                    className="form-checkbox h-5 w-5 text-[#CFA746]"
+                    className="form-checkbox h-5 w-5 text-primary-gold"
                   />
                   <span className="ml-2 text-white">Sign up for our newsletter</span>
                 </label>
@@ -198,7 +198,7 @@ export const Contact = () => {
               <div className="flex items-center justify-center">
                 <button
                   type="submit"
-                  className="bg-[#CFA746] hover:bg-[#B08E3B] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-300"
+                  className="bg-primary-gold hover:bg-primary-gold-dark text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-300"
                 >
                   Send Message
                 </button>

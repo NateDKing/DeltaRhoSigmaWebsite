@@ -53,15 +53,13 @@ const boardMembers = [
 
 const BoardMemberCard = ({ name, title, image, description }) => (
   <div
-    className="bg-transparent border-4 border-[#CFA746] rounded-lg shadow-md overflow-hidden"
-    style={{ borderRadius: '15px' }}  // Added 15px border radius for the container
+    className="bg-transparent border-4 border-primary-gold rounded-xl shadow-md overflow-hidden"
   >
     <div className="flex">
       <img
         src={image}
         alt={name}
-        className="w-1/3 h-32 object-cover"
-        style={{ borderBottomRightRadius: '15px' }}  // Rounded bottom-right corner of the image
+        className="w-1/3 h-32 object-cover rounded-br-2xl"
       />
       <div className="w-2/3 p-4">
         <h2 className="text-xl font-semibold text-white">{name}</h2> {/* Changed text color to white */}
@@ -133,10 +131,10 @@ export const Board = () => {
   }, [photos.length]);
 
   return (
-    <div style={{ backgroundColor: '#363939', width: '100%', margin: 0, padding: 0, minHeight: '100vh' }}>
+    <div className='bg-primary-gray w-full m-0 p-0 min-h-screen'>
       {/* Hero Section */}
       <section className="mb-12">
-        <div className="max-h-96 flex items-center justify-center relative" style={{ backgroundColor: '#CFA746', overflow: 'hidden', width: '100%' }}>
+        <div className="max-h-96 flex items-center justify-center relative overflow-hidden bg-primary-gray">
           <div
             className={`slider ${isSliding ? 'sliding' : ''}`}
             style={{
@@ -159,7 +157,7 @@ export const Board = () => {
         </div>
       </section>
 
-      <div style={{ margin: '0 10vw', paddingBottom: '2rem' }}>
+      <div className="mx-10vw mb-2rem">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {boardMembers.map((member, index) => (
             <BoardMemberCard key={index} {...member} />
